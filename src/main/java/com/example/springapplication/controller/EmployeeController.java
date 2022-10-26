@@ -18,6 +18,8 @@ public class EmployeeController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public Employee save(final @RequestBody Employee employee) {
-        return employeeService.save(employee);
+        // return employeeService.save(employee);
+        // return employeeService.saveAndThrowError(employee);
+        return employeeService.saveAndThrowErrorAllowPersistence(employee);
     }
 }
