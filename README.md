@@ -23,3 +23,6 @@ curl --location --request POST 'http://localhost:8080/employee' \
 - To inspect container: `docker inspect {containerId}`
 - To stop container: `docker stop {container-id}`
 - To remove container: `docker rm {container-id}`
+
+##### Resources
+- [Dockerizing a spring-boot app](https://www.baeldung.com/dockerizing-spring-boot-application)
