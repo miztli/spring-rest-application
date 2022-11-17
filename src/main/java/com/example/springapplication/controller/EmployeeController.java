@@ -19,7 +19,5 @@ public class EmployeeController {
     @ResponseStatus(HttpStatus.CREATED)
     public Employee save(final @RequestBody Employee employee) {
         return employeeService.save(employee);
-        // return employeeService.saveAndThrowError(employee);
-        // return employeeService.saveAndThrowErrorAllowPersistence(employee);
     }
 }

@@ -18,7 +18,8 @@ curl --location --request POST 'http://localhost:8080/employee' \
 ### Containerize application
 
 - Create Dockerfile
-- Run image in detached mode: `docker run --name spring-boot-app -p8090:8080 -d spring-application:latest`
+- Build image: `docker build --tag={image-name}:{version} .`
+- Run image in detached mode: `docker run --name employee-service -p8082:8082 -d employee-service:latest`
 - To ssh into the container: `docker exec -it {containerId} {bash/sh}`
 - To inspect container: `docker inspect {containerId}`
 - To stop container: `docker stop {container-id}`
