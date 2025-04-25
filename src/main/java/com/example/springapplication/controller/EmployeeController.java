@@ -12,12 +12,19 @@ import javax.annotation.Resource;
 @RequestMapping("/employee")
 public class EmployeeController {
 
+    # Test copilot
     @Resource
     private EmployeeService employeeService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public Employee save(final @RequestBody Employee employee) {
+        return employeeService.save(employee);
+    }
+    
+    @PostMapping(value = "/v2", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Employee saveV2(final @RequestBody Employee employee) {
         return employeeService.save(employee);
     }
 }
